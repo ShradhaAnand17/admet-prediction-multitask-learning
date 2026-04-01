@@ -27,11 +27,9 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
   - Mean Squared Error (MSE) for regression
 
 ## Evaluation Metrics
-
 - **Classification:**
   - ROC-AUC
   - Accuracy
-
 - **Regression:**
   - RMSE (Root Mean Squared Error)
   - MAE (Mean Absolute Error)
