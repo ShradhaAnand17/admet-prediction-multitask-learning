@@ -2,13 +2,9 @@
 
 Multi-task deep learning model for predicting ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties from molecular structures using shared representations across heterogeneous datasets.
 
----
-
 ## Overview
 
 This project implements an end-to-end pipeline for ADMET prediction using a multi-task neural network. Instead of training separate models for each property, the model learns shared molecular representations to improve generalization across tasks.
-
----
 
 ## Key Features
 
@@ -20,7 +16,30 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 - Inference pipeline for new molecules
 - Flask-based deployment (optional)
 
----
+## Model Architecture
 
-## 🏗️ Project Structure
+- Shared feature extractor (fully connected layers)
+- Task-specific heads:
+  - Classification (e.g., toxicity)
+  - Regression (e.g., solubility)
+- Loss functions:
+  - Binary Cross Entropy (BCE) for classification
+  - Mean Squared Error (MSE) for regression
+
+## Evaluation Metrics
+
+- **Classification:**
+  - ROC-AUC
+  - Accuracy
+
+- **Regression:**
+  - RMSE (Root Mean Squared Error)
+  - MAE (Mean Absolute Error)
+
+## Tech Stack
+-Python
+-PyTorch
+-RDKit
+-Scikit-learn
+-Flask
 
