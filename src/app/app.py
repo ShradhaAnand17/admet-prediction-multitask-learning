@@ -413,6 +413,8 @@ def download_report():
 
 if __name__ == '__main__':
     if load_admet_system():
+        import os
+        ngrok.set_auth_token("put your ngrok auth token here")
         url = ngrok.connect(5000).public_url
         print(f"\n🚀 SUCCESS! TOOL RUNNING AT: {url}\n")
         app.run(port=5000)
