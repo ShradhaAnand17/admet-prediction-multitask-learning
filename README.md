@@ -3,11 +3,9 @@
 Multi-task deep learning model for predicting ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties from molecular structures using shared representations across heterogeneous datasets.
 
 ## Overview
-
 This project implements an end-to-end pipeline for ADMET prediction using a multi-task neural network. Instead of training separate models for each property, the model learns shared molecular representations to improve generalization across tasks.
 
 ## Key Features
-
 - Multi-task learning across multiple ADMET endpoints
 - Molecular featurization from SMILES (RDKit-based)
 - Unified dataset pipeline from multiple sources
@@ -17,14 +15,28 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 - Flask-based deployment
 
 ## Model Architecture
-
-- Shared feature extractor (fully connected layers)
-- Task-specific heads:
-  - Classification (hERG toxicity, CYP450 Inhibition, BBB permeability, HIA)
-  - Regression (solubility, lipophilicity)
-- Loss functions:
+The model is built using PyTorch and follows a shared backbone design:
+- Shared Feature Extractor
+  - Fully connected neural network layers
+  - Learns generalized molecular embeddings
+- Task-Specific Heads
+  - Classification Tasks:
+    - hERG toxicity
+    - CYP450 inhibition
+    - Blood-Brain Barrier (BBB) permeability
+    - Human Intestinal Absorption (HIA)
+  - Regression Tasks:
+    - Aqueous solubility (ESOL)
+    - Lipophilicity (LogP)
+- Loss Functions
   - Binary Cross Entropy (BCE) for classification
   - Mean Squared Error (MSE) for regression
+
+## Molecular Featurization
+Molecular structures are processed using RDKit:
+- SMILES parsing
+- Molecular descriptors
+- Fingerprint generation
 
 ## Evaluation Metrics
 - **Classification:**
@@ -33,6 +45,10 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 - **Regression:**
   - RMSE (Root Mean Squared Error)
   - MAE (Mean Absolute Error)
+ 
+## ⚙️ Pipeline Overview
+```text
+SMILES → Featurization → Shared Neural Network → Task-specific Outputs → Predictions
 
 ## Web App (Colab-Based Deployment)
 An interactive Flask-based interface is included for real-time ADMET prediction. The web app is deployed using ngrok inside Google Colab
@@ -47,4 +63,15 @@ An interactive Flask-based interface is included for real-time ADMET prediction.
 - RDKit
 - Scikit-learn
 - Flask
+
+## Limitations
+- Requires active Colab runtime
+- Temporary deployment URL
+- Dependent on tunneling service stability
+
+## Applications
+- Drug discovery and screening
+- ADMET risk assessment
+- Computational pharmacology
+AI-driven medicinal chemistry
 
