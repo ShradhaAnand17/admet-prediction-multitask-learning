@@ -1,3 +1,6 @@
+import pandas as pd
+from tdc.single_pred import ADME, Tox
+
 class CoreADMETDataLoader:
     """
     Load 6 core ADMET datasets:
