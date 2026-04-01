@@ -1,5 +1,8 @@
 # MULTI-TASK NEURAL NETWORK
 
+import torch
+import torch.nn as nn
+
 class MultiTaskADMETModel(nn.Module):
     def __init__(self, input_dim, task_names, task_types, hidden_dims=[1024, 512, 256]):
         super(MultiTaskADMETModel, self).__init__()
