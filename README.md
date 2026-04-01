@@ -34,11 +34,12 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
   - RMSE (Root Mean Squared Error)
   - MAE (Mean Absolute Error)
 
-## 🌐 Demo
-An interactive Flask-based interface is included for real-time ADMET prediction.
+## Web App (Colab-Based Deployment)
+An interactive Flask-based interface is included for real-time ADMET prediction. The web app is deployed using ngrok inside Google Colab
 - The app is served via a temporary public URL generated during runtime (Colab + tunneling)
+- The server runs only while the Colab notebook is active. 
 - This allows quick testing without full deployment
-> Note: The link expires once the session ends.
+> Note: If the runtime disconnects or the cell stops, the app goes offline. The link expires once the session ends.
 
 ## Tech Stack
 - Python
