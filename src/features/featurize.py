@@ -1,3 +1,9 @@
+import numpy as np
+from rdkit import Chem
+from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors
+from rdkit import DataStructs
+from sklearn.preprocessing import StandardScaler
+
 class MolecularFeaturizer:
     """Generate molecular fingerprints and descriptors"""
 
