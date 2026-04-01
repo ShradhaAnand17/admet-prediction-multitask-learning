@@ -35,9 +35,9 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
   - MAE (Mean Absolute Error)
 
 ## Tech Stack
--Python
--PyTorch
--RDKit
--Scikit-learn
--Flask
+- Python
+- PyTorch
+- RDKit
+- Scikit-learn
+- Flask
 
