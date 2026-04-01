@@ -20,8 +20,8 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 
 - Shared feature extractor (fully connected layers)
 - Task-specific heads:
-  - Classification (e.g., toxicity)
-  - Regression (e.g., solubility)
+  - Classification (hERG toxicity, CYP450 Inhibition, BBB permeability, HIA)
+  - Regression (solubility, lipophilicity)
 - Loss functions:
   - Binary Cross Entropy (BCE) for classification
   - Mean Squared Error (MSE) for regression
