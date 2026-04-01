@@ -1,5 +1,9 @@
 # PREDICTION & REPORTING
 
+import torch
+import numpy as np
+from rdkit import Chem
+
 class ADMETPredictor:
     """Production ADMET predictor"""
 
