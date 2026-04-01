@@ -47,7 +47,6 @@ Molecular structures are processed using RDKit:
   - MAE (Mean Absolute Error)
  
 ## ⚙️ Pipeline Overview
-```text
 SMILES → Featurization → Shared Neural Network → Task-specific Outputs → Predictions
 
 ## Web App (Colab-Based Deployment)
@@ -56,6 +55,18 @@ An interactive Flask-based interface is included for real-time ADMET prediction.
 - The server runs only while the Colab notebook is active. 
 - This allows quick testing without full deployment
 > Note: If the runtime disconnects or the cell stops, the app goes offline. The link expires once the session ends.
+
+## 🛠️ Tech Stack
+- Python  
+- PyTorch  
+- RDKit  
+- Scikit-learn  
+- Flask  
+
+## ⚠️ Limitations
+- Requires an active Google Colab runtime  
+- Generates temporary (non-persistent) deployment URLs  
+- Dependent on tunneling service stability  
 
 ## Tech Stack
 - Python
@@ -73,5 +84,5 @@ An interactive Flask-based interface is included for real-time ADMET prediction.
 - Drug discovery and screening
 - ADMET risk assessment
 - Computational pharmacology
-AI-driven medicinal chemistry
+- AI-driven medicinal chemistry
 
