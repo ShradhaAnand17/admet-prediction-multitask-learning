@@ -14,7 +14,7 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 - Joint training for classification and regression tasks
 - Scalable PyTorch-based architecture
 - Inference pipeline for new molecules
-- Flask-based deployment (optional)
+- Flask-based deployment
 
 ## Model Architecture
 
@@ -33,6 +33,12 @@ This project implements an end-to-end pipeline for ADMET prediction using a mult
 - **Regression:**
   - RMSE (Root Mean Squared Error)
   - MAE (Mean Absolute Error)
+
+## 🌐 Demo
+An interactive Flask-based interface is included for real-time ADMET prediction.
+- The app is served via a temporary public URL generated during runtime (Colab + tunneling)
+- This allows quick testing without full deployment
+> Note: The link expires once the session ends.
 
 ## Tech Stack
 - Python
